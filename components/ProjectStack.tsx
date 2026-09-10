@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import fineAnswer from "@/public/fineanswer.png";
 import irishBangla from "@/public/irishbangla.png";
 import fineAnswerIreland from "@/public/fineanswerIreland.png";
+import irelandFintax from "@/public/irelandfintax.png";
+import aibnAccountants from "@/public/aibn.png";
 
 type Project = {
   name: string;
@@ -29,6 +31,15 @@ const PROJECTS: Project[] = [
     accent: "#33bbcf",
   },
   {
+    name: "Ireland Fintax",
+    category: "Finance & Tax",
+    description:
+      "A partner-led tax, audit and advisory site with dedicated hubs for accountants, founders and individuals, plus a booking-first consultation flow.",
+    liveUrl: "https://www.irishfintax.ie",
+    image: irelandFintax,
+    accent: "#4c6ef5",
+  },
+  {
     name: "Irish Bangla",
     category: "Community Platform",
     description:
@@ -45,6 +56,15 @@ const PROJECTS: Project[] = [
     liveUrl: "https://fine-answer-ireland-plhp.vercel.app",
     image: fineAnswerIreland,
     accent: "#18a06b",
+  },
+  {
+    name: "AIBN Chartered Accountants",
+    category: "Professional Services",
+    description:
+      "A practice site for a Dublin chartered accountancy firm, organised around clear service hubs and fast routes to contact and consultation booking.",
+    liveUrl: "https://www.aibncharteredaccountants.ie",
+    image: aibnAccountants,
+    accent: "#7ab648",
   },
 ];
 

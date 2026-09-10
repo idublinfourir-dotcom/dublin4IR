@@ -143,13 +143,13 @@ export default function ImpactStats() {
               Total project value delivered for clients
             </p>
             <p className="max-w-[26ch] text-[12px] leading-relaxed text-white/70">
-              Cumulative value of government and enterprise programmes — from discovery and
-              procurement through build, launch, and ongoing support across our Dublin and
-              Dhaka delivery teams.
+              Cumulative value of enterprise programmes we have taken from
+              discovery and procurement through build, launch, and ongoing
+              support across our Dublin and Dhaka delivery teams.
             </p>
           </div>
           <p className={`relative z-[1] mt-6 ${statValueClass} !text-[clamp(2rem,4.5vw,3rem)] !tracking-[-0.04em]`}>
-            <CountUp end={500} prefix="€" suffix="K+" duration={2400} />
+            <CountUp end={250} prefix="€" suffix="K+" duration={2400} />
           </p>
         </article>
 
@@ -185,15 +185,15 @@ export default function ImpactStats() {
         </article>
 
         <div className="flex flex-col gap-4 lg:col-span-3 lg:col-start-10 lg:row-span-2 lg:row-start-1 lg:h-full lg:min-h-0">
-          <article className="relative flex shrink-0 items-center justify-center overflow-hidden rounded-[var(--radius-card-sm)] border border-[var(--border-soft)] bg-[linear-gradient(165deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] px-3 py-2.5 shadow-[var(--shadow-card)]">
-            <div className="flex items-center gap-1.5">
-              <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--purple-btn)] text-[9px] font-extrabold text-white">
-                D4
-              </span>
-              <span className="text-[13px] font-bold tracking-[-0.02em] text-white">
-                Dublin<span className="text-white/60">4ir</span>
-              </span>
-            </div>
+          <article className="relative flex shrink-0 items-center justify-center overflow-hidden rounded-[var(--radius-card-sm)] border border-[var(--border-soft)] bg-[linear-gradient(165deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.03)_100%)] px-4 py-3 shadow-[var(--shadow-card)]">
+            <Image
+              src="/logo.png"
+              alt="Dublin 4ir"
+              width={2618}
+              height={835}
+              className="h-7 w-auto"
+              sizes="160px"
+            />
           </article>
 
           <article className="surface-card relative flex min-h-[148px] flex-1 flex-col justify-between overflow-hidden p-5 sm:min-h-[160px] sm:p-6">
