@@ -143,13 +143,13 @@ export default function ImpactStats() {
               Total project value delivered for clients
             </p>
             <p className="max-w-[26ch] text-[12px] leading-relaxed text-white/70">
-              Cumulative value of government and enterprise programmes — from discovery and
-              procurement through build, launch, and ongoing support across our Dublin and
-              Dhaka delivery teams.
+              Cumulative value of enterprise programmes we have taken from
+              discovery and procurement through build, launch, and ongoing
+              support across our Dublin and Dhaka delivery teams.
             </p>
           </div>
           <p className={`relative z-[1] mt-6 ${statValueClass} !text-[clamp(2rem,4.5vw,3rem)] !tracking-[-0.04em]`}>
-            <CountUp end={500} prefix="€" suffix="K+" duration={2400} />
+            <CountUp end={250} prefix="€" suffix="K+" duration={2400} />
           </p>
         </article>
 
