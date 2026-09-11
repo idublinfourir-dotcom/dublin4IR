@@ -22,6 +22,11 @@ function IconTile({ children }: { children: React.ReactNode }) {
   );
 }
 
+// The constellation cards read as simulated product UI, so they stay on the
+// UI typeface (Inter) rather than the hero's marketing faces. Declared here on
+// purpose instead of inheriting whatever body happens to set.
+const NODE_FONT = "font-[family-name:var(--font-inter)]";
+
 const NODE_BASE =
   "absolute flex items-center gap-3 rounded-[16px] border border-[var(--border-soft)] bg-[var(--surface-tint)] px-4 py-3.5 text-[var(--text)] shadow-[var(--shadow-card)] backdrop-blur-[14px]";
 
@@ -109,7 +114,7 @@ function Constellation() {
         </svg>
 
         {/* central hub */}
-        <div className="absolute top-1/2 left-1/2 grid h-[152px] w-[152px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-[30px] border border-[rgba(51,187,207,0.4)] bg-[radial-gradient(circle_at_30%_30%,rgba(51,187,207,0.45),transparent_60%),linear-gradient(160deg,#0d3d48_0%,#0a1628_100%)] shadow-[0_0_0_1px_rgba(176,192,204,0.08)_inset,0_0_80px_0_rgba(51,187,207,0.45),0_30px_80px_-20px_rgba(51,187,207,0.55)]">
+        <div className={`${NODE_FONT} absolute top-1/2 left-1/2 grid h-[152px] w-[152px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-[30px] border border-[rgba(51,187,207,0.4)] bg-[radial-gradient(circle_at_30%_30%,rgba(51,187,207,0.45),transparent_60%),linear-gradient(160deg,#0d3d48_0%,#0a1628_100%)] shadow-[0_0_0_1px_rgba(176,192,204,0.08)_inset,0_0_80px_0_rgba(51,187,207,0.45),0_30px_80px_-20px_rgba(51,187,207,0.55)]`}>
           <div className="pointer-events-none absolute -inset-10 -z-10 bg-[radial-gradient(circle,rgba(51,187,207,0.3)_0%,transparent_60%)] blur-[20px]" />
           <div className="bg-[linear-gradient(180deg,#fff_0%,#c8f0f4_100%)] bg-clip-text text-[52px] font-extrabold tracking-[-0.04em] text-transparent">
             D4
@@ -118,7 +123,7 @@ function Constellation() {
 
         {/* top-left: Gov Tender card */}
         <div
-          className={`${NODE_BASE} top-[6%] left-[4%] min-w-[190px] animate-[float-a_6s_ease-in-out_infinite]`}
+          className={`${NODE_BASE} ${NODE_FONT} top-[6%] left-[4%] min-w-[190px] animate-[float-a_6s_ease-in-out_infinite]`}
         >
           <IconTile>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -141,7 +146,7 @@ function Constellation() {
 
         {/* top mid-right: Officer pill */}
         <div
-          className={`${NODE_BASE} top-[2%] right-[24%] animate-[float-c_5.5s_ease-in-out_infinite] gap-2.5 rounded-full py-[7px] pr-3.5 pl-[7px]`}
+          className={`${NODE_BASE} ${NODE_FONT} top-[2%] right-[24%] animate-[float-c_5.5s_ease-in-out_infinite] gap-2.5 rounded-full py-[7px] pr-3.5 pl-[7px]`}
         >
           <div className="h-8 w-8 shrink-0 rounded-full border-[1.5px] border-white/[0.15] bg-[linear-gradient(135deg,#e8a87c,#2a9eb0)]" />
           <div className="text-[13.5px] font-medium text-[var(--text-muted)]">
@@ -151,7 +156,7 @@ function Constellation() {
 
         {/* mid-left: Outsourcing pill */}
         <div
-          className={`${NODE_BASE} top-[24%] left-[2%] animate-[float-a_6.5s_ease-in-out_infinite] gap-2.5 rounded-full py-[7px] pr-4 pl-[7px]`}
+          className={`${NODE_BASE} ${NODE_FONT} top-[24%] left-[2%] animate-[float-a_6.5s_ease-in-out_infinite] gap-2.5 rounded-full py-[7px] pr-4 pl-[7px]`}
         >
           <div className="h-8 w-8 shrink-0 rounded-full border-[1.5px] border-white/[0.15] bg-[linear-gradient(135deg,#2a9eb0,#c8f0f4)]" />
           <div className="text-[13.5px] font-medium whitespace-nowrap text-[var(--text-muted)]">
@@ -161,7 +166,7 @@ function Constellation() {
 
         {/* top-right: Stat card */}
         <div
-          className={`${NODE_BASE} top-[14%] right-[4%] w-[196px] animate-[float-b_7s_ease-in-out_infinite] flex-col items-stretch gap-2`}
+          className={`${NODE_BASE} ${NODE_FONT} top-[14%] right-[4%] w-[196px] animate-[float-b_7s_ease-in-out_infinite] flex-col items-stretch gap-2`}
         >
           <div className="flex items-center justify-between">
             <span className="text-[12.5px] tracking-[0.02em] text-[var(--text-dim)]">
@@ -202,7 +207,7 @@ function Constellation() {
 
         {/* bottom-left: Project Lead */}
         <div
-          className={`${NODE_BASE} bottom-[28%] left-[2%] animate-[float-b_6.5s_ease-in-out_infinite]`}
+          className={`${NODE_BASE} ${NODE_FONT} bottom-[28%] left-[2%] animate-[float-b_6.5s_ease-in-out_infinite]`}
         >
           <div className="grid h-[21px] w-[21px] shrink-0 place-items-center rounded-full bg-[var(--warm)] text-[11.5px] font-extrabold text-[var(--bg)]">
             ✓
@@ -220,14 +225,14 @@ function Constellation() {
         </div>
 
         {/* bottom-center: chip */}
-        <div className="absolute bottom-[2%] left-1/2 inline-flex -translate-x-1/2 items-center gap-2 rounded-[16px] border border-[var(--border-soft)] bg-[var(--surface-tint)] px-4 py-3 text-[13px] font-semibold tracking-[0.02em] whitespace-nowrap text-[var(--text-muted)] uppercase shadow-[var(--shadow-card)]">
+        <div className={`${NODE_FONT} absolute bottom-[2%] left-1/2 inline-flex -translate-x-1/2 items-center gap-2 rounded-[16px] border border-[var(--border-soft)] bg-[var(--surface-tint)] px-4 py-3 text-[13px] font-semibold tracking-[0.02em] whitespace-nowrap text-[var(--text-muted)] uppercase shadow-[var(--shadow-card)]`}>
           <span className="text-[var(--purple-2)]">▸</span> Public-Private
           Partnership
         </div>
 
         {/* bottom-right: status pill */}
         <div
-          className={`${NODE_BASE} right-[2%] bottom-[17%] animate-[float-c_6s_ease-in-out_infinite] gap-2.5 rounded-full py-[7px] pr-4 pl-[7px]`}
+          className={`${NODE_BASE} ${NODE_FONT} right-[2%] bottom-[17%] animate-[float-c_6s_ease-in-out_infinite] gap-2.5 rounded-full py-[7px] pr-4 pl-[7px]`}
         >
           <div className="h-8 w-8 shrink-0 rounded-full border-[1.5px] border-white/[0.15] bg-[linear-gradient(135deg,#c8f0f4,#e8a87c)]" />
           <div className="text-[13.5px] font-medium text-[var(--text-muted)]">
@@ -254,7 +259,9 @@ export default function HeroSection() {
       />
 
       <div className="relative z-[2] mx-auto grid max-w-[1240px] grid-cols-1 items-start gap-x-10 gap-y-12 px-6 pt-10 pb-8 min-[960px]:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] min-[960px]:items-center min-[1200px]:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] min-[960px]:gap-x-12 min-[960px]:px-10 min-[960px]:py-16">
-        <div>
+        {/* Stacked layout keeps the copy in a readable, centred column instead of
+            hugging the left edge of a wide tablet viewport. */}
+        <div className="mx-auto w-full max-w-[600px] min-[960px]:mx-0 min-[960px]:max-w-none">
           <div className="mb-6 inline-flex items-center rounded-full border border-[var(--border-strong)] px-4 py-2 font-[family-name:var(--font-red-rose)] text-[13px] text-[var(--text-muted)] min-[960px]:text-[14px]">
             Ireland&apos;s Digital Partner
           </div>

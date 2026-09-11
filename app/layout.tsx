@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Poppins, Red_Rose } from "next/font/google";
+import { Inter, Playfair_Display, Red_Rose } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,12 +11,6 @@ const nasalization = localFont({
   variable: "--font-nasalization",
   display: "swap",
   weight: "400",
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
 });
 
 const redRose = Red_Rose({
@@ -53,7 +47,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${inter.variable} ${playfair.variable} ${nasalization.variable} ${redRose.variable} ${poppins.variable} antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${nasalization.variable} ${redRose.variable} antialiased`}
     >
       <body>
         <Navbar />
