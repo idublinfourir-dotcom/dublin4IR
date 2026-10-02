@@ -11,8 +11,10 @@ export default function TechStack() {
       className="relative mx-auto max-w-[1240px] px-6 pb-14 pt-4 min-[960px]:px-10"
     >
       <div className="grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-12 lg:gap-5">
-        {/* Left: orbit — "Every Stack Ever" */}
-        <div className="surface-card-sm flex min-h-0 flex-col p-5 sm:p-6 lg:col-span-5 lg:row-span-2 lg:min-h-[440px]">
+        {/* Left: orbit, "Every Stack Ever". overflow-hidden contains the
+            spinning rings: their rotated bounding boxes reach ~60px past the
+            card and would otherwise widen the page on phones. */}
+        <div className="surface-card-sm flex min-h-0 flex-col overflow-hidden p-5 sm:p-6 lg:col-span-5 lg:row-span-2 lg:min-h-[440px]">
           <p className="text-[11px] font-semibold tracking-[0.14em] text-[var(--text-dim)] uppercase">
             Technology
           </p>
