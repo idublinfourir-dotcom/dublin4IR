@@ -218,6 +218,13 @@ body {
   color: var(--text);
 }
 
+/* Set on html so body's own `overflow-x: clip` (below) clips at the body box.
+   Without this, body's value propagates to the viewport as `hidden`, which
+   mobile Chrome still lets the user pan sideways when anything overflows. */
+html {
+  overflow-x: clip;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
